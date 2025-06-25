@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>埙韵童心工作室 </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#36D399',
+                        accent: '#FF6B35',
+                        dark: '#1E293B',
+                        light: '#F8FAFC'
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .transition-custom {
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            .hover-lift {
+                transform: translateY(0);
+                transition: transform 0.3s ease;
+            }
+            .hover-lift:hover {
+                transform: translateY(-5px);
+            }
+        }
+    </style>
+</head>
+<body class="font-inter bg-light text-dark antialiased">
+    <!-- 导航栏 -->
+    <header id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 bg-transparent">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="#" class="flex items-center space-x-2">
+                    <div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
+                        <img src="../img/店铺logo.png1.png" alt="" />
+                    </div>
+                    <span class="text-xl font-bold text-red text-shadow">埙韵童心</span>
+                </a>
+                
+                <!-- 桌面导航 -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-white hover:text-secondary transition-custom font-medium">首页</a>
+                    <a href="#about" class="text-white hover:text-secondary transition-custom font-medium">关于我们</a>
+                    <a href="#services" class="text-white hover:text-secondary transition-custom font-medium">服务</a>
+                    <a href="#works" class="text-white hover:text-secondary transition-custom font-medium">作品</a>
+                    <a href="#team" class="text-white hover:text-secondary transition-custom font-medium">团队</a>
+                    <a href="#contact" class="text-white hover:text-secondary transition-custom font-medium">联系我们</a>
+                </nav>
+                
+                <!-- 移动端菜单按钮 -->
+                <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+                    <i class="fa fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- 移动端导航菜单 -->
+        <div id="mobile-menu" class="md:hidden bg-white shadow-lg rounded-b-xl mx-4 mt-2 hidden">
+            <div class="py-4 px-4 space-y-3">
+                <a href="#home" class="block py-2 px-4 text-dark hover:bg-primary/10 hover:text-primary rounded-lg transition-custom">首页</a>
+                <a href="#about" class="block py-2 px-4 text-dark hover:bg-primary/10 hover:text-primary rounded-lg transition-custom">关于我们</a>
+                <a href="#services" class="block py-2 px-4 text-dark hover:bg-primary/10 hover:text-primary rounded-lg transition-custom">服务</a>
+                <a href="#works" class="block py-2 px-4 text-dark hover:bg-primary/10 hover:text-primary rounded-lg transition-custom">作品</a>
+                <a href="#team" class="block py-2 px-4 text-dark hover:bg-primary/10 hover:text-primary rounded-lg transition-custom">团队</a>
+                <a href="#contact" class="block py-2 px-4 text-dark hover:bg-primary/10 hover:text-primary rounded-lg transition-custom">联系我们</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 英雄区域 -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/90 to-dark overflow-hidden">
+        <div class="absolute inset-0.5  bg-cover bg-center opacity1">
+			<img width="100%"  height="100%" src="../img/background.png" alt="" />
+		</div>
+        <div class="absolute inset-0 bg-gradient-to-b from-dark/50 to-dark/80"></div>
+        
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-[clamp(2.5rem,6vw,4.5rem)] font-bold text-white leading-tight mb-6 animate-fadeIn">
+                    让泥土与，<span class="text-secondary">乐音共鸣</span>
+                </h1>
+                <p class="text-[clamp(1rem,2vw,1.25rem)] text-white/90 mb-10 max-w-3xl mx-auto">
+                    “埙韵童心” 陶埙工作室成立于 2025 年，是深耕传统乐器文化传承与创新的艺术空间。
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#contact" class="px-8 py-3 bg-secondary text-white font-medium rounded-full hover:bg-secondary/90 transition-custom shadow-lg hover:shadow-xl hover-lift">
+                        联系我们
+                    </a>
+                    <a href="#works" class="px-8 py-3 bg-white/10 backdrop-blur-sm text-white border border-white/30 font-medium rounded-full hover:bg-white/20 transition-custom hover-lift">
+                        查看作品
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#about" class="text-white/80 hover:text-white">
+                <i class="fa fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section id="about" class="py-24 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark mb-4">关于我们</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">我们是一群充满激情的设计师和制造者，致力于创造有意义的陶埙体验</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <h3 class="text-2xl font-bold mb-6 text-dark">我们的故事</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        创意无限工作室成立于2025年，由一群热爱设计和陶埙的伙伴共同创立。我们相信陶埙不仅仅是听觉上的美感，更是解决问题和创造价值的方式。
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        成立以来，我们服务了超过200家客户，从初创企业到知名品牌，帮助他们实现了数字化转型和品牌升级。我们的作品涵盖了外观设计、课程开发、红色传承等多个领域。
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                                <i class="fa fa-trophy text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark mb-2">20+</h4>
+                                <p class="text-gray-600 text-sm">设计奖项</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                                <i class="fa fa-users text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark mb-2">50+</h4>
+                                <p class="text-gray-600 text-sm">专业人才</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                                <i class="fa fa-coffee text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark mb-2">200+</h4>
+                                <p class="text-gray-600 text-sm">满意客户</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                                <i class="fa fa-briefcase text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark mb-2">300+</h4>
+                                <p class="text-gray-600 text-sm">成功项目</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-custom">
+                        了解更多 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <div class="order-1 md:order-2 relative">
+                    <div class="relative z-10 rounded-xl overflow-hidden shadow-2xl hover-lift">
+                        <img src="../img/校赛1.jpg" alt="工作室环境" class="w-full h-auto">
+                    </div>
+                    <div class="absolute top-10 -right-5 w-60 h-60 bg-secondary/20 rounded-full -z-10"></div>
+                    <div class="absolute -bottom-5 -left-5 w-40 h-40 bg-primary/20 rounded-full -z-10"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- 我们的作品 -->
+    <section id="works" class="py-24 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark mb-4">我们的作品</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">探索我们的精选项目，了解我们如何通过创意设计解决实际问题</p>
+            </div>
+            
+            <!-- 作品筛选 -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="filter-btn active px-6 py-2 rounded-full bg-primary text-white font-medium transition-custom" data-filter="all">
+                    全部
+                </button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-gray-200 transition-custom" data-filter="branding">
+                    乡村
+                </button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-gray-200 transition-custom" data-filter="uiux">
+                    学校
+                </button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-gray-200 transition-custom" data-filter="web">
+                    景区
+                </button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-gray-200 transition-custom" data-filter="red-xiaochuanren">
+                    红色小传人
+                </button>
+            </div>
+            
+            <!-- 作品网格 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 works-grid">
+                <!-- 作品项目 1 -->
+                    <div class="work-item branding" data-category="branding">
+                        <div class="relative overflow-hidden rounded-xl group">
+                            <img src="../img/1.png" alt="相拥" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                                <h3 class="text-xl font-bold text-white mb-2">相拥</h3>
+                                <p class="text-white/80 mb-4">李雨薰</p>
+                                <a href="../html/user_1.html" class="text-secondary hover:text-secondary/80 font-medium flex items-center">
+                                    查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 作品项目 2 -->
+                    <div class="work-item uiux" data-category="uiux">
+                        <div class="relative overflow-hidden rounded-xl group">
+                            <img src="../img/2.png" alt="心中的光" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                                <h3 class="text-xl font-bold text-white mb-2">心中的光</h3>
+                                <p class="text-white/80 mb-4">陈宇轩</p>
+                                <a href="../html/user_2.html" class="text-secondary hover:text-secondary/80 font-medium flex items-center">
+                                    查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 作品项目 3 -->
+                    <div class="work-item web" data-category="web">
+                        <div class="relative overflow-hidden rounded-xl group">
+                            <img src="../img/3.png" alt="亲爱的祖国" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                                <h3 class="text-xl font-bold text-white mb-2">亲爱的祖国</h3>
+                                <p class="text-white/80 mb-4">秦逸</p>
+                                <a href="#" class="text-secondary hover:text-secondary/80 font-medium flex items-center">
+                                    查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 作品项目 4 -->
+                    <div class="work-item app" data-category="app">
+                        <div class="relative overflow-hidden rounded-xl group">
+                            <img src="../img/4.png" alt="夜空中最亮的星" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                                <h3 class="text-xl font-bold text-white mb-2">夜空中最亮的星</h3>
+                                <p class="text-white/80 mb-4">戴庭坤</p>
+                                <a href="../html/user_4.html" class="text-secondary hover:text-secondary/80 font-medium flex items-center">
+                                    查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 作品项目 5 -->
+                    <div class="work-item branding" data-category="branding">
+                        <div class="relative overflow-hidden rounded-xl group">
+                            <img src="../img/5.png" alt="矩阵" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                                <h3 class="text-xl font-bold text-white mb-2">矩阵</h3>
+                                <p class="text-white/80 mb-4">林宇阳</p>
+                                <a href="../html/user_5.html" class="text-secondary hover:text-secondary/80 font-medium flex items-center">
+                                    查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 作品项目 6 -->
+                    <div class="work-item web" data-category="web">
+                        <div class="relative overflow-hidden rounded-xl group">
+                            <img src="../img/6.png" alt="天线熊猫" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                                <h3 class="text-xl font-bold text-white mb-2">天线熊猫</h3>
+                                <p class="text-white/80 mb-4">夏清颜</p>
+                                <a href="../html/user_6.html" class="text-secondary hover:text-secondary/80 font-medium flex items-center">
+                                    查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 红色小传人视频区域 (默认隐藏) -->
+            <div id="red-xiaochuanren-videos" class="hidden mt-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- 视频项目 1 -->
+                    <div class="video-item bg-white rounded-xl overflow-hidden shadow-lg">
+                        <div class="aspect-video relative">
+                            <video controls poster="../img/video-placeholder.jpg">
+                                <source src="../shiping/小学低段组 殷世梓情 重庆永川子庄小学《江姐的勇敢》.mp4" type="video/mp4">
+                                <source src="../shiping/小学低段组 殷世梓情 重庆永川子庄小学《江姐的勇敢》.mp4" type="video/webm">
+                                您的浏览器不支持HTML5视频播放。
+                            </video>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-dark mb-2">《江姐的勇敢》</h3>
+                            <p class="text-gray-600 mb-4">讲述革命历史，传承红色精神</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="fa fa-user mr-2"></i> 小传人：殷世梓情
+                                <span class="mx-2">•</span>
+                                <i class="fa fa-clock-o mr-2"></i> 3:01
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 视频项目 2 -->
+                    <div class="video-item bg-white rounded-xl overflow-hidden shadow-lg">
+                        <div class="aspect-video relative">
+                            <video controls loading="lazy" controls poster="../img/video-placeholder2.jpg">
+                                <source src="../shiping/哈哈哈.mp4" type="video/mp4">
+                                <source src="../videos/red-music.webm" type="video/webm">
+                                您的浏览器不支持HTML5视频播放。
+                            </video>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-dark mb-2">革命歌曲传唱</h3>
+                            <p class="text-gray-600 mb-4">用歌声传递革命情怀</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="fa fa-user mr-2"></i> 表演者：学生合唱团
+                                <span class="mx-2">•</span>
+                                <i class="fa fa-clock-o mr-2"></i> 16:45
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="./云上埙声馆.html" class="inline-flex items-center px-8 py-3 bg-primary text-white font-medium rounded-full hover:bg-primary/90 transition-custom shadow-lg hover:shadow-xl hover-lift">
+                    查看更多作品 <i class="fa fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        // 筛选功能实现
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const worksGrid = document.querySelector('.works-grid');
+            const redVideos = document.getElementById('red-xiaochuanren-videos');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // 移除所有按钮的活动状态
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('bg-primary', 'text-white');
+                        btn.classList.add('bg-gray-100', 'text-gray-700');
+                    });
+                    
+                    // 添加当前按钮的活动状态
+                    this.classList.remove('bg-gray-100', 'text-gray-700');
+                    this.classList.add('bg-primary', 'text-white');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    
+                    if (filter === 'red-xiaochuanren') {
+                        // 显示红色小传人视频，隐藏作品网格
+                        worksGrid.classList.add('hidden');
+                        redVideos.classList.remove('hidden');
+                        
+                        // 停止所有视频播放
+                        const videos = document.querySelectorAll('video');
+                        videos.forEach(video => {
+                            video.pause();
+                            video.currentTime = 0;
+                        });
+                    } else {
+                        // 显示作品网格，隐藏红色小传人视频
+                        worksGrid.classList.remove('hidden');
+                        redVideos.classList.add('hidden');
+                        
+                        // 停止所有视频播放
+                        const videos = document.querySelectorAll('video');
+                        videos.forEach(video => {
+                            video.pause();
+                            video.currentTime = 0;
+                        });
+                        
+                        // 筛选逻辑
+                        if (filter !== 'all') {
+                            const items = document.querySelectorAll('.work-item');
+                            items.forEach(item => {
+                                if (item.getAttribute('data-category') === filter) {
+                                    item.style.display = 'block';
+                                } else {
+                                    item.style.display = 'none';
+                                }
+                            });
+                        } else {
+                            // 显示所有作品
+                            const items = document.querySelectorAll('.work-item');
+                            items.forEach(item => {
+                                item.style.display = 'block';
+                            });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+    
+    <script>
+        // 筛选功能实现
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const redVideos = document.getElementById('red-xiaochuanren-videos');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // 移除所有按钮的活动状态
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('bg-primary', 'text-white');
+                        btn.classList.add('bg-gray-100', 'text-gray-700');
+                    });
+                    
+                    // 添加当前按钮的活动状态
+                    this.classList.remove('bg-gray-100', 'text-gray-700');
+                    this.classList.add('bg-primary', 'text-white');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    
+                    if (filter === 'red-xiaochuanren') {
+                        // 显示红色小传人视频
+                        redVideos.classList.remove('hidden');
+                    } else {
+                        // 隐藏红色小传人视频
+                        redVideos.classList.add('hidden');
+                    }
+                    
+                    // 筛选逻辑 (保持原有功能不变)
+                    if (filter !== 'all') {
+                        const items = document.querySelectorAll('.work-item');
+                        items.forEach(item => {
+                            if (item.getAttribute('data-category') === filter) {
+                                item.style.display = 'block';
+                            } else {
+                                item.style.display = 'none';
+                            }
+                        });
+                    } else {
+                        // 显示所有作品
+                        const items = document.querySelectorAll('.work-item');
+                        items.forEach(item => {
+                            item.style.display = 'block';
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- 我们的团队 -->
+    <section id="team" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark mb-4">我们的团队</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">认识我们背后的创意团队，他们致力于将想法转化为现实</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- 团队成员 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover-lift transition-custom">
+                    <div class="relative">
+                        <img src="../img/成员照片/聂2.jpg" alt="聂真飞 - 技术总监" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                            <a href="#" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-custom">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-custom">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="https://mail.qq.com/cgi-bin/frame_html?sid=XaBlsV-Zg4vRvhN7&from=" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-custom">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-1">聂真飞</h3>
+                        <p class="text-primary mb-4">技术总监</p>
+                        <p class="text-gray-600 text-sm">
+                            风景很好可我没时间欣赏！
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- 团队成员 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover-lift transition-custom">
+                    <div class="relative">
+                        <img src="../img/成员照片/杜.png" alt="杜" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                            <a href="#" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-custom">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-custom">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-custom">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-1">杜汶溢</h3>
+                        <p class="text-primary mb-4">项目负责人</p>
+                        <p class="text-gray-600 text-sm">
+                            3年投资经验
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- 团队成员 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover-lift transition-custom">
+                    <div class="relative">
+                        <img src="../img/成员照片/李.jpg" alt="李" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                            <a href="#" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-custom">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-custom">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-custom">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-1">李裴婷</h3>
+                        <p class="text-primary mb-4">品牌传播专员</p>
+                        <p class="text-gray-600 text-sm">
+                            收集影像及传播
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- 团队成员 4 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover-lift transition-custom">
+                    <div class="relative">
+                        <img src="../img/成员照片/周.png" alt="周" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                            <a href="#" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-custom">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-custom">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-custom">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-1">周雨轩</h3>
+                        <p class="text-primary mb-4">审计监察专员</p>
+                        <p class="text-gray-600 text-sm">
+                            财务流程审计、运营合规审查
+                        </p>
+                    </div>
+                </div>
+				<!-- 团队成员 5 -->
+				<div class="bg-white rounded-xl shadow-lg overflow-hidden hover-lift transition-custom">
+				    <div class="relative">
+				        <img src="../img/成员照片/田.png" alt="周" class="w-full h-64 object-cover">
+				        <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+				            <a href="#" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-custom">
+				                <i class="fa fa-linkedin"></i>
+				            </a>
+				            <a href="#" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-custom">
+				                <i class="fa fa-twitter"></i>
+				            </a>
+				            <a href="#" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-custom">
+				                <i class="fa fa-envelope"></i>
+				            </a>
+				        </div>
+				    </div>
+				    <div class="p-6">
+				        <h3 class="text-xl font-bold text-dark mb-1">田源</h3>
+				        <p class="text-primary mb-4">数据运营专员</p>
+				        <p class="text-gray-600 text-sm">
+				            业务数据整理、分析报告生成
+				        </p>
+				    </div>
+				</div>
+				<!-- 团队成员 6 -->
+				<div class="bg-white rounded-xl shadow-lg overflow-hidden hover-lift transition-custom">
+				    <div class="relative">
+				        <img src="../img/成员照片/冯婷.png" alt="冯" class="w-full h-64 object-cover">
+				        <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+				            <a href="#" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-custom">
+				                <i class="fa fa-linkedin"></i>
+				            </a>
+				            <a href="#" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-custom">
+				                <i class="fa fa-twitter"></i>
+				            </a>
+				            <a href="#" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-custom">
+				                <i class="fa fa-envelope"></i>
+				            </a>
+				        </div>
+				    </div>
+				    <div class="p-6">
+				        <h3 class="text-xl font-bold text-dark mb-1">冯婷</h3>
+				        <p class="text-primary mb-4">网络安全工程师</p>
+				        <p class="text-gray-600 text-sm">
+				            检测系统漏洞、管理访问权限、处理安全事件
+				        </p>
+				    </div>
+				</div>
+				<!-- 团队成员 7 -->
+				<div class="bg-white rounded-xl shadow-lg overflow-hidden hover-lift transition-custom">
+				    <div class="relative">
+				        <img src="../img/成员照片/张锐.png" alt="冯" class="w-full h-64 object-cover">
+				        <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+				            <a href="#" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-custom">
+				                <i class="fa fa-linkedin"></i>
+				            </a>
+				            <a href="#" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-custom">
+				                <i class="fa fa-twitter"></i>
+				            </a>
+				            <a href="#" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-custom">
+				                <i class="fa fa-envelope"></i>
+				            </a>
+				        </div>
+				    </div>
+				    <div class="p-6">
+				        <h3 class="text-xl font-bold text-dark mb-1">张锐</h3>
+				        <p class="text-primary mb-4">视效剪辑师</p>
+				        <p class="text-gray-600 text-sm">
+				            视频特效制作、剪辑合成
+				        </p>
+				    </div>
+				</div>
+				<!-- 团队成员 8 -->
+				<div class="bg-white rounded-xl shadow-lg overflow-hidden hover-lift transition-custom">
+				    <div class="relative">
+				        <img src="../img/成员照片/夏天.png" alt="冯" class="w-full h-64 object-cover">
+				        <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+				            <a href="#" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-custom">
+				                <i class="fa fa-linkedin"></i>
+				            </a>
+				            <a href="#" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-custom">
+				                <i class="fa fa-twitter"></i>
+				            </a>
+				            <a href="#" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-custom">
+				                <i class="fa fa-envelope"></i>
+				            </a>
+				        </div>
+				    </div>
+				    <div class="p-6">
+				        <h3 class="text-xl font-bold text-dark mb-1">夏天</h3>
+				        <p class="text-primary mb-4">新媒体运营专员</p>
+				        <p class="text-gray-600 text-sm">
+				            短视频平台运营、用户互动管理
+				        </p>
+				    </div>
+				</div>
+				<!-- 团队成员 9 -->
+				<div class="bg-white rounded-xl shadow-lg overflow-hidden hover-lift transition-custom">
+				    <div class="relative">
+				        <img src="../img/成员照片/张玉.png" alt="冯" class="w-full h-64 object-cover">
+				        <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+				            <a href="#" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-custom">
+				                <i class="fa fa-linkedin"></i>
+				            </a>
+				            <a href="#" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-custom">
+				                <i class="fa fa-twitter"></i>
+				            </a>
+				            <a href="#" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-custom">
+				                <i class="fa fa-envelope"></i>
+				            </a>
+				        </div>
+				    </div>
+				    <div class="p-6">
+				        <h3 class="text-xl font-bold text-dark mb-1">张玉</h3>
+				        <p class="text-primary mb-4">市场分析师</p>
+				        <p class="text-gray-600 text-sm">
+				            行业趋势分析、用户需求调研
+				        </p>
+				    </div>
+				</div>
+				<!-- 团队成员 10 -->
+				<div class="bg-white rounded-xl shadow-lg overflow-hidden hover-lift transition-custom">
+				    <div class="relative">
+				        <img src="../img/成员照片/陈喜.png" alt="冯" class="w-full h-64 object-cover">
+				        <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+				            <a href="#" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-custom">
+				                <i class="fa fa-linkedin"></i>
+				            </a>
+				            <a href="#" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-custom">
+				                <i class="fa fa-twitter"></i>
+				            </a>
+				            <a href="#" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-custom">
+				                <i class="fa fa-envelope"></i>
+				            </a>
+				        </div>
+				    </div>
+				    <div class="p-6">
+				        <h3 class="text-xl font-bold text-dark mb-1">陈喜</h3>
+				        <p class="text-primary mb-4">运营总监</p>
+				        <p class="text-gray-600 text-sm">
+				            统筹融媒体平台运营，制定运营策略与规划
+				        </p>
+				    </div>
+				</div>
+				<!-- 团队成员 11 -->
+				<div class="bg-white rounded-xl shadow-lg overflow-hidden hover-lift transition-custom">
+				    <div class="relative">
+				        <img src="../img/成员照片/王.jpg" alt="王" class="w-full h-64 object-cover">
+				        <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+				            <a href="#" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-custom">
+				                <i class="fa fa-linkedin"></i>
+				            </a>
+				            <a href="#" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-custom">
+				                <i class="fa fa-twitter"></i>
+				            </a>
+				            <a href="#" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-custom">
+				                <i class="fa fa-envelope"></i>
+				            </a>
+				        </div>
+				    </div>
+				    <div class="p-6">
+				        <h3 class="text-xl font-bold text-dark mb-1">王思雨</h3>
+				        <p class="text-primary mb-4">产品经理</p>
+				        <p class="text-gray-600 text-sm">
+				            产品规划、需求分析、迭代管理
+				        </p>
+				    </div>
+				</div>
+				<!-- 团队成员 12 -->
+				<div class="bg-white rounded-xl shadow-lg overflow-hidden hover-lift transition-custom">
+				    <div class="relative">
+				        <img src="../img/成员照片/黄.jpg" alt="黄" class="w-full h-64 object-cover">
+				        <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+				            <a href="#" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-custom">
+				                <i class="fa fa-linkedin"></i>
+				            </a>
+				            <a href="#" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-custom">
+				                <i class="fa fa-twitter"></i>
+				            </a>
+				            <a href="#" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-custom">
+				                <i class="fa fa-envelope"></i>
+				            </a>
+				        </div>
+				    </div>
+				    <div class="p-6">
+				        <h3 class="text-xl font-bold text-dark mb-1">黄钰雯</h3>
+				        <p class="text-primary mb-4">财务主管</p>
+				        <p class="text-gray-600 text-sm">
+				            财务风险防控、预算管理
+				        </p>
+				    </div>
+				</div>
+				<!-- 团队成员 13 -->
+				<div class="bg-white rounded-xl shadow-lg overflow-hidden hover-lift transition-custom">
+				    <div class="relative">
+				        <img src="../img/成员照片/廖.jpg" alt="廖" class="w-full h-64 object-cover">
+				        <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+				            <a href="#" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-custom">
+				                <i class="fa fa-linkedin"></i>
+				            </a>
+				            <a href="#" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-custom">
+				                <i class="fa fa-twitter"></i>
+				            </a>
+				            <a href="#" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-primary transition-custom">
+				                <i class="fa fa-envelope"></i>
+				            </a>
+				        </div>
+				    </div>
+				    <div class="p-6">
+				        <h3 class="text-xl font-bold text-dark mb-1">廖唯伶</h3>
+				        <p class="text-primary mb-4">文创设计师</p>
+				        <p class="text-gray-600 text-sm">
+				            文创产品设计、视觉形象开发
+				        </p>
+				    </div>
+				</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 指导教师 -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark mb-4">指导教师</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">致力于创新创业大赛8年</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 评价 1 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-lg hover-lift transition-custom">
+                    <div class="flex items-center mb-6">
+                        <div class="text-primary">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                    <span style="float: left;">
+						<img src="../img/成员照片/image (1).png" alt="" />
+						<p  style="font-family: Arial; margin-top: 25px; font-size: 20px;">马容</p>
+					</span>
+                    <div class="flex items-center">     
+                        <div style="margin-left: 40px;">     
+                            <p style="font-size: 20px;" class="text-gray-500 text-sm">心理咨询师（高级）</p>
+							<p style="font-size: 20px; margin-top: 5px;" class="text-gray-500 text-sm">职业生涯规划师（高级）</p>
+							<p style="font-size: 20px; margin-top: 5px;" class="text-gray-500 text-sm">社会实践中获省部级奖12项</p>
+							<p style="font-size: 20px; margin-top: 5px;" class="text-gray-500 text-sm">主研省部级学术科研项目3项</p>
+							<p style="font-size: 20px; margin-top: 5px;" class="text-gray-500 text-sm">以第一作者身份发表论文10篇</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 评价 2 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-lg hover-lift transition-custom">
+                    <div class="flex items-center mb-6">
+                        <div class="text-primary">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                    <span style="float: left;">
+                		<img src="../img/成员照片/image (2).png" alt="" />
+                		<p  style="font-family: Arial; margin-top: 25px; font-size: 20px;">任滨杨</p>
+                	</span>
+                    <div class="flex items-center">     
+                        <div style="margin-left: 40px;">     
+                            <p style="font-size: 20px;" class="text-gray-500 text-sm">中级双师型教师</p>
+                			<p style="font-size: 20px; margin-top: 5px;" class="text-gray-500 text-sm">自媒体“1+X”考评员</p>
+                			<p style="font-size: 20px; margin-top: 5px;" class="text-gray-500 text-sm">参与中老国际课程标准制定</p>
+                			<p style="font-size: 20px; margin-top: 5px;" class="text-gray-500 text-sm">指导学生参加多项</p>
+                			<p style="font-size: 20px; margin-top: 5px;" class="text-gray-500 text-sm">赛事获国家级奖项</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 评价 1 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-lg hover-lift transition-custom">
+                    <div class="flex items-center mb-6">
+                        <div class="text-primary">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                    <span style="float: left;">
+                		<img src="../img/成员照片/image (3).png" alt="" />
+                		<p  style="font-family: Arial; margin-top: 25px; font-size: 20px;">王莉</p>
+                	</span>
+                    <div class="flex items-center">     
+                        <div style="margin-left: 40px;">     
+                            <p style="font-size: 20px;" class="text-gray-500 text-sm">指导学生多项大赛获省部级奖项</p>
+                			<p style="font-size: 20px; margin-top: 5px;" class="text-gray-500 text-sm">主持省部级课题4项</p>
+                			<p style="font-size: 20px; margin-top: 5px;" class="text-gray-500 text-sm">发表学术论文12篇</p>
+                			<p style="font-size: 20px; margin-top: 5px;" class="text-gray-500 text-sm">出版专著1部</p>
+                			
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark mb-4">联系我们</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">有任何问题或项目需求？请随时与我们联系</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                        <h3 class="text-xl font-bold text-dark mb-6">发送消息</h3>
+                        <form id="contact-form" class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="name" class="block text-gray-700 font-medium mb-2">姓名</label>
+                                    <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring focus:ring-primary/20 transition-custom" placeholder="您的姓名" required>
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-gray-700 font-medium mb-2">邮箱</label>
+                                    <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring focus:ring-primary/20 transition-custom" placeholder="您的邮箱" required>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="subject" class="block text-gray-700 font-medium mb-2">主题</label>
+                                <input type="text" id="subject" name="subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring focus:ring-primary/20 transition-custom" placeholder="消息主题" required>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-gray-700 font-medium mb-2">消息</label>
+                                <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring focus:ring-primary/20 transition-custom" placeholder="请输入您的消息" required></textarea>
+                            </div>
+                            <a href="https://mail.qq.com/cgi-bin/frame_html?sid=XaBlsV-Zg4vRvhN7&from=">
+								<button type="submit" class="px-8 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary/90 transition-custom shadow-lg hover:shadow-xl hover-lift">
+								    发送消息 <i class="fa fa-paper-plane ml-2"></i>
+								</button>
+							</a>
+                        </form>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <h3 class="text-xl font-bold text-dark mb-6">订阅我们的通讯</h3>
+                        <p class="text-gray-600 mb-6">
+                            订阅我们的电子通讯，获取最新的设计趋势、行业动态和创意灵感。
+                        </p>
+                        <form class="flex">
+                            <input type="email" placeholder="您的邮箱地址" class="flex-grow px-4 py-3 rounded-l-lg border border-gray-300 focus:border-primary focus:ring focus:ring-primary/20 transition-custom">
+                            <button type="submit" class="px-6 py-3 bg-secondary text-white font-medium rounded-r-lg hover:bg-secondary/90 transition-custom">
+                                订阅
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+                        <h3 class="text-xl font-bold text-dark mb-6">联系方式</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                                    <i class="fa fa-map-marker text-primary text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-dark mb-1">地址</h4>
+                                    <p class="text-gray-600">重庆市永川区兴龙大道1099号</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                                    <i class="fa fa-phone text-primary text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-dark mb-1">电话</h4>
+                                    <p class="text-gray-600">+86 153 2344 3386</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                                    <i class="fa fa-envelope text-primary text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-dark mb-1">邮箱</h4>
+                                    <p class="text-gray-600">QQ:2903043837@qq.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                                    <i class="fa fa-clock-o text-primary text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-dark mb-1">工作时间</h4>
+                                    <p class="text-gray-600">周一至周五: 9:00 - 18:00</p>
+                                    <p class="text-gray-600">周六: 10:00 - 15:00 (预约制)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <h3 class="text-xl font-bold text-dark mb-6">关注我们</h3>
+                        <p class="text-gray-600 mb-6">
+                            关注我们的社交媒体账号，了解我们的最新动态和作品。
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#" class="w-12 h-12 rounded-full bg-[#3b5998] flex items-center justify-center text-white hover:bg-opacity-80 transition-custom">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-[#1da1f2] flex items-center justify-center text-white hover:bg-opacity-80 transition-custom">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-[#0077b5] flex items-center justify-center text-white hover:bg-opacity-80 transition-custom">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-[#c32aa3] flex items-center justify-center text-white hover:bg-opacity-80 transition-custom">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-[#ff0000] flex items-center justify-center text-white hover:bg-opacity-80 transition-custom">
+                                <i class="fa fa-youtube-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white pt-16 pb-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-10 h-10 rounded-lg bg-white flex items-center justify-center">
+                            <img src="../img/店铺logo.png1.png" alt="" />
+                        </div>
+                        <span class="text-xl font-bold">埙韵童心</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        我们是一家专注于陶埙设计课程设计的创意工作室，致力于通过创新设计帮助陶埙打造独特品牌形象。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-custom">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-custom">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-custom">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-custom">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">快速链接</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-custom">首页</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-custom">关于我们</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-custom">服务</a></li>
+                        <li><a href="#works" class="text-gray-400 hover:text-white transition-custom">作品</a></li>
+                        <li><a href="#team" class="text-gray-400 hover:text-white transition-custom">团队</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-custom">联系我们</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">服务</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-custom">外观设计</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-custom">课程设计</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-custom">埙口开发</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-custom">红色小传人</a></li>
+                        
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">联系信息</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker text-primary mt-1 mr-3"></i>
+                            <span class="text-gray-400">重庆市永川区兴龙大道1099号</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-phone text-primary mt-1 mr-3"></i>
+                            <span class="text-gray-400">+86 153 2344 3386</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-envelope text-primary mt-1 mr-3"></i>
+                            <span class="text-gray-400">QQ：29903043837</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-clock-o text-primary mt-1 mr-3"></i>
+                            <span class="text-gray-400">周一至周五: 9:00 - 18:00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                        &copy; 2025 埙韵童心工作室. 保留所有权利.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="../html/隐私政策.html" class="text-gray-400 hover:text-white text-sm transition-custom">隐私政策</a>
+                        <a href="../html/服务条款.html" class="text-gray-400 hover:text-white text-sm transition-custom">服务条款</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-primary/90">
+        <i class="fa fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // 导航栏滚动效果
+        const navbar = document.getElementById('navbar');
+        const backToTop = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-white', 'shadow-md');
+                navbar.classList.remove('bg-transparent');
+                document.querySelectorAll('#navbar a').forEach(link => {
+                    link.classList.remove('text-white');
+                    link.classList.add('text-dark');
+                });
+                document.querySelector('#navbar .fa-bars').classList.remove('text-white');
+                document.querySelector('#navbar .fa-bars').classList.add('text-dark');
+                
+                backToTop.classList.remove('opacity-0', 'invisible');
+                backToTop.classList.add('opacity-100', 'visible');
+            } else {
+                navbar.classList.remove('bg-white', 'shadow-md');
+                navbar.classList.add('bg-transparent');
+                document.querySelectorAll('#navbar a').forEach(link => {
+                    link.classList.add('text-white');
+                    link.classList.remove('text-dark');
+                });
+                document.querySelector('#navbar .fa-bars').classList.add('text-white');
+                document.querySelector('#navbar .fa-bars').classList.remove('text-dark');
+                
+                backToTop.classList.add('opacity-0', 'invisible');
+                backToTop.classList.remove('opacity-100', 'visible');
+            }
+        });
+        
+        // 移动端菜单切换
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // 关闭移动菜单
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // 返回顶部
+        backToTop.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // 作品筛选
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const workItems = document.querySelectorAll('.work-item');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // 移除所有按钮的活动状态
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('active', 'bg-primary', 'text-white');
+                    btn.classList.add('bg-gray-100', 'text-gray-700');
+                });
+                
+                // 添加当前按钮的活动状态
+                this.classList.add('active', 'bg-primary', 'text-white');
+                this.classList.remove('bg-gray-100', 'text-gray-700');
+                
+                const filter = this.getAttribute('data-filter');
+                
+                workItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // 表单提交
+        const contactForm = document.getElementById('contact-form');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // 这里可以添加表单验证和提交逻辑
+            alert('感谢您的留言！我们会尽快回复您。');
+            contactForm.reset();
+        });
+    </script>
+</body>
+</html>
+    
